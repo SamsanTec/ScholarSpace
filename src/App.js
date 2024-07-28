@@ -15,6 +15,7 @@ import Courses from './Components/Courses';
 import CourseDetails from './Components/CourseDetails';
 import { UserProvider } from './Components/UserContext';
 import Profile from './Components/Profile';
+import EmployerFeedback from './Components/EmployerFeedback';
 import './App.css';
 
 const App = () => {
@@ -38,7 +39,8 @@ const App = () => {
             <Route path="/employer/job-details" element={<JobDetails />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:courseId" element={<CourseDetails />} />
-            <Route path="/profile" element={<Profile />} />  {/* Add this line */}
+            <Route path="/profile" element={<Profile />} />  
+            <Route path="/employer/provide-feedback" element={<EmployerFeedback apiUrl={apiUrl} />} />
           </Routes>
         </div>
       </Router>

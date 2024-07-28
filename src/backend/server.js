@@ -165,3 +165,19 @@ app.delete('/jobs/:jobId', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
+// Route to handle feedback submission
+app.post('/feedback', (req, res) => {
+    const { userId, feedbackType, feedback } = req.body;
+  
+    const query = 'INSERT INTO feedback (user_id, feedbackType, feedback) VALUES (?, ?, ?)';
+  
+    db.execute(query, [userId, feedbackType, feedback], (err, results) => {
+      if (err) {
+        console.error('Error inserting feedback data: ' + err.stack);
+        return res.status(500).json({ message: 'Error submitting feedback.' });
+      }
+      res.json({ message: 'Feedback submitted successfully!' });
+    });
+  });
+  

@@ -36,9 +36,7 @@ const EmployerDashboard = ({ apiUrl }) => {
     <div className="dashboard-container">
       <header className="dashboard-header">
         <nav className="navbar">
-          <div className="navbar-logo">
-            <img src="/path/to/logo.png" alt="Career Connection Logo" />
-          </div>
+          <div className="navbar-logo"></div>
           <div className="navbar-links">
             <Link to="/employer/post-job">Post Job</Link>
             <Link to="/employer/view-applications">View Applications</Link>

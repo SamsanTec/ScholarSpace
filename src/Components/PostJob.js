@@ -10,7 +10,7 @@ const PostJob = ({ apiUrl }) => {
   const [numPeople, setNumPeople] = useState('');
   const [jobLocation, setJobLocation] = useState('');
   const [streetAddress, setStreetAddress] = useState('');
-  const [companyDescription, setCompanyDescription] = useState('');
+  const [jobDescription, setJobDescription] = useState('');
 
   const handleNext = async (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ const PostJob = ({ apiUrl }) => {
       numPeople,
       jobLocation,
       streetAddress,
-      companyDescription,
+      jobDescription,
       userId: user.userId,
     };
 
@@ -105,13 +105,13 @@ const PostJob = ({ apiUrl }) => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="companyDescription">Company description</label>
+          <label htmlFor="jobDescription">Job description</label>
           <textarea 
-            id="companyDescription" 
-            name="companyDescription" 
+            id="jobDescription" 
+            name="jobDescription" 
             rows="4" 
-            value={companyDescription}
-            onChange={(e) => setCompanyDescription(e.target.value)}
+            value={jobDescription}
+            onChange={(e) => setJobDescription(e.target.value)}
           />
         </div>
         <button type="submit">Next</button>
