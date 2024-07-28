@@ -1,0 +1,107 @@
+/* JobListings.css */
+
+
+  .job-listings-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Lighten background to see the image */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .dashboard-header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #002855;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+ 
+
+  .search-input {
+    width: 80%; /* Adjust width to make search bar longer */
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    border: 5px; /* Remove border */
+    outline: none; /* Remove outline */
+    box-shadow: none; /* Remove box shadow */
+  }
+  
+  .search-button {
+    background-color: #f8f8f8;
+    width: 10%;
+    color: rgb(26, 27, 70);
+    border: 10px    ;
+    padding: 10px 50px; /* Adjust padding to shorten button */
+    border-radius: 5px;
+    margin: -1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+  }
+ 
+  .search-button:hover {
+    background-color: #D3D8E8;
+  }
+
+  .job-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-input, .filter-select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+  }
+  
+  .filter-button {
+    background-color: #002855;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .filter-button:hover {
+    background-color: #2C3E50;
+  }
+  
+  .job-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .job-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+  }
+  
+  .job-card h3 {
+    margin-top: 0;
+    color: #002855;
+  }
+  
+  .job-card p {
+    margin: 5px 0;
+    color: #333333;
+  }
+  
+  .job-card strong {
+    color: #333333;
+  }
+  

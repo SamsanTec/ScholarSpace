@@ -31,7 +31,8 @@ const StudentAuthPage = ({ apiUrl }) => {
       return;
     }
 
-    const url = isLogin ? ${apiUrl}/login : ${apiUrl}/signup;
+    const url = isLogin ? `${apiUrl}/login` : `${apiUrl}/signup`;
+
     const data = isLogin ? { email, password, userType: 'student' } : { email, password, fullName, studentNumber, userType: 'student' };
 
     try {

@@ -11,9 +11,9 @@ const StudentDashboard = () => {
             <img src="/logo.png" alt="Career Connection Logo" />
           </div>
           <div className="navbar-search">
-            <input type="text" placeholder="Search" />
+            <input type="text" placeholder="Search" className="search-input" />
             <button className="search-button">
-              <i className="fa fa-search"></i>
+              <i className="fas fa-search"></i>
             </button>
           </div>
           <div className="navbar-links">
@@ -23,7 +23,9 @@ const StudentDashboard = () => {
             <Link to="/courses">Courses</Link>
           </div>
           <div className="navbar-profile">
-            <div className="profile-initials">AS</div>
+            <Link to="/profile" className="profile-link">
+              <div className="profile-initials">AS</div>
+            </Link>
           </div>
         </nav>
       </header>

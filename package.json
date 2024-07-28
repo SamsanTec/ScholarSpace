@@ -15,7 +15,6 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "joi": "^17.13.3",
-    "mysql": "^2.18.1",
     "mysql2": "^3.10.3",
     "react": "^18.3.1",
     "react-cool-onclickoutside": "^1.7.0",
@@ -55,7 +54,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "live-server": "^1.2.2"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }

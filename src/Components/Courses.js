@@ -27,13 +27,20 @@ const Courses = () => {
   return (
     <div className="courses-page">
       <header className="navbar">
-        <img src="logo.png" alt="ScholarSpace Logo" className="navbar-logo" />
-        <input type="text" className="search-bar" placeholder="Search" />
+        <div className="navbar-logo">
+          <img src="logo.png" alt="ScholarSpace Logo" />
+        </div>
+        <div className="navbar-search">
+          <input type="text" className="search-input" placeholder="Search" />
+          <button className="search-button">
+            <i className="fas fa-search"></i>
+          </button>
+        </div>
         <nav className="nav-links">
-          <a href="/jobs">Jobs</a>
-          <a href="/events">Events</a>
-          <a href="/employers">Employers</a>
-          <a href="/courses">Courses</a>
+          <Link to="/jobs">Jobs</Link>
+          <Link to="/events">Events</Link>
+          <Link to="/employers">Employers</Link>
+          <Link to="/courses">Courses</Link>
           <div className="profile-icon">AS</div>
         </nav>
       </header>

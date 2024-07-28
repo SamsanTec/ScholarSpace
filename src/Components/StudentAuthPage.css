@@ -1,57 +1,62 @@
 .auth-container {
-    width: 300px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .auth-container h1 {
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    text-align: left;
-  }
-  
-  .form-group input {
-    width: calc(100% - 20px);
-    padding: 8px;
-    margin-left: 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .toggle-button {
-    background-color: transparent;
-    color: #007bff;
-    border: none;
-    margin-top: 15px;
-    cursor: pointer;
-  }
-  
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: rgba(249, 249, 249, 0.9); /* Azure color with opacity */
+}
+
+.auth-container h1 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.form-group input {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-left: 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #002855; /* Change to the desired color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #001f3f; /* Slightly darker shade for hover effect */
+}
+
+.toggle-button {
+  background-color: transparent;
+  color: #002855; /* Change to the desired color */
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.toggle-button:hover {
+  color: #e7ebef; /* Ensure the color remains the same on hover */
+}

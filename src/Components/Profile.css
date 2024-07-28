@@ -1,0 +1,102 @@
+/* Profile Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../../public/joblistings.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+  }
+  
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 53, 56, 0.8); /* Dark overlay with opacity */
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  .profile-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Lighten background to see the image */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .profile-details, .saved-jobs, .saved-courses {
+    background-color: rgba(255, 255, 255, 0.9); /* Increase opaqueness */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-details h3, .saved-jobs h3, .saved-courses h3 {
+    margin-top: 0;
+  }
+  
+  .edit-button {
+    background-color: #002855;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .edit-button i {
+    margin-right: 5px;
+  }
+  
+  .edit-button:hover {
+    background-color: #001f3f;
+  }
+  
+  .job-cards, .course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .job-card, .course-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+  }
+  
+  .job-card h3, .course-card h3 {
+    margin-top: 0;
+    color: #002855;
+  }
+  
+  .job-card p, .course-card p {
+    margin: 5px 0;
+    color: #333333;
+  }
+  
+  .job-card strong, .course-card strong {
+    color: #333333;
+  }
+  

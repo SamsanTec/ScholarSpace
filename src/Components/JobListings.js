@@ -38,16 +38,16 @@ const JobListings = () => {
             <img src="/logo.png" alt="Career Connection Logo" />
           </div>
           <div className="navbar-search">
-            <input type="text" placeholder="Search" />
+            <input type="text" placeholder="Search" className="search-input" />
             <button className="search-button">
-              <i className="fa fa-search"></i>
+              <i className="fas fa-search"></i>
             </button>
           </div>
           <div className="navbar-links">
-            <a href="#jobs">Jobs</a>
-            <a href="#events">Events</a>
-            <a href="#employers">Employers</a>
-            <a href="#courses">Courses</a>
+            <a href="/jobs">Jobs</a>
+            <a href="/events">Events</a>
+            <a href="/employers">Employers</a>
+            <a href="/courses">Courses</a>
           </div>
           <div className="navbar-profile">
             <div className="profile-initials">AS</div>
@@ -57,34 +57,48 @@ const JobListings = () => {
       <main className="dashboard-main">
         <h2>Job Listings</h2>
         <div className="job-filters">
-          <input type="text" placeholder="Keywords" />
-          <input type="text" placeholder="Location" />
-          <select>
+          <input type="text" placeholder="Keywords" className="filter-input" />
+          <input type="text" placeholder="Location" className="filter-input" />
+          <select className="filter-select">
             <option>Position Type</option>
             <option>Full-Time</option>
             <option>Part-Time</option>
             <option>Co-op</option>
           </select>
-          <select>
+          <select className="filter-select">
             <option>Employer Industry</option>
+            <option>Tech</option>
+            <option>Healthcare</option>
+            <option>Hospitality Industry</option>
+            <option>Finance</option>
+            <option>Arts and Design</option>
+            <option>Entertainment</option>
+            <option>Fashion</option>
           </select>
-          <select>
+          <select className="filter-select">
             <option>Job Categories</option>
+            <option>Web Developer</option>
+            <option>Musician</option>
+            <option>Accountant</option>
+            <option>Sales</option>
+            <option>Lawyer</option>
           </select>
-          <select>
-            <option>Remote/On-Site</option>
+          <select className="filter-select">
+            <option>Remote</option>
+            <option>On-site</option>
+            <option>Hybrid</option>
           </select>
-          <button>Search</button>
+          <button className="filter-button">Search</button>
         </div>
         <div className="job-cards">
           {dummyJobs.map((job, index) => (
             <div key={index} className="job-card">
               <h3>{job.title}</h3>
-              <p>{job.company}</p>
-              <p>{job.location}</p>
-              <p>{job.type}</p>
-              <p>{job.datePosted}</p>
-              <p>{job.status}</p>
+              <p><strong>Company:</strong> {job.company}</p>
+              <p><strong>Location:</strong> {job.location}</p>
+              <p><strong>Type:</strong> {job.type}</p>
+              <p><strong>Date Posted:</strong> {job.datePosted}</p>
+              <p><strong>Status:</strong> {job.status}</p>
             </div>
           ))}
         </div>

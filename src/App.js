@@ -14,6 +14,7 @@ import JobDetails from './Components/JobDetails';
 import Courses from './Components/Courses';
 import CourseDetails from './Components/CourseDetails';
 import { UserProvider } from './Components/UserContext';
+import Profile from './Components/Profile';
 import './App.css';
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
             <Route path="/employer/job-details" element={<JobDetails />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:courseId" element={<CourseDetails />} />
+            <Route path="/profile" element={<Profile />} />  {/* Add this line */}
           </Routes>
         </div>
       </Router>
