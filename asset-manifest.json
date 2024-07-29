@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/scholarspace/static/css/main.b266f749.css",
+    "main.js": "/scholarspace/static/js/main.eb19ea20.js",
+    "static/media/admin-icon.png": "/scholarspace/static/media/admin-icon.66c5d9de33d0c9f602ef.png",
+    "static/media/employer-icon.jpg": "/scholarspace/static/media/employer-icon.ccec2231ac69936ab63f.jpg",
+    "static/media/student-icon.jpg": "/scholarspace/static/media/student-icon.d487189d0d08c36fb777.jpg",
+    "index.html": "/scholarspace/index.html",
+    "main.b266f749.css.map": "/scholarspace/static/css/main.b266f749.css.map",
+    "main.eb19ea20.js.map": "/scholarspace/static/js/main.eb19ea20.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b266f749.css",
+    "static/js/main.eb19ea20.js"
+  ]
+}
