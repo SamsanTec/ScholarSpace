@@ -1,19 +1,21 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+/* General styling for the landing page */
+.landing-page {
+  width: 100vw;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: url('../../public/joblistings.jpg') no-repeat center center fixed;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.7); /* Darkens the background image */
   background-blend-mode: darken;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.container {
+.landing-page .container {
   position: relative;
   z-index: 1;
   padding: 40px;
@@ -23,38 +25,41 @@ body, html {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Stronger shadow to maintain contrast */
 }
 
-.header,
-.main-content,
-.footer {
+.landing-page .header,
+.landing-page .main-content,
+.landing-page .footer {
   position: relative;
   z-index: 2;
 }
 
-.logo {
+.landing-page .logo {
   max-width: 100px;
   margin-bottom: 20px;
 }
 
-.main-content h1 {
+/* Main heading styling */
+.landing-page .main-content h1 {
   margin-bottom: 30px;
-  font-size: 28px;
-  color: #333; /* Dark gray text for good contrast */
+  font-size: 32px;
+  color: white; /* Change to white */
+  font-weight: bold; /* Make text bold */
 }
 
-.user-types {
+/* User type styling */
+.landing-page .user-types {
   display: flex;
   justify-content: space-around; /* Ensure equal spacing between items */
   gap: 20px;
 }
 
-.user-type {
+.landing-page .user-type {
   flex: 1;
   max-width: 150px;
 }
 
-.user-type a {
+.landing-page .user-type a {
   text-decoration: none;
-  color: #333; /* Dark gray text for good visibility */
+  color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,41 +70,49 @@ body, html {
   transition: background 0.3s, box-shadow 0.3s;
 }
 
-.user-type a:hover {
+.landing-page .user-type a:hover {
   background: rgba(224, 224, 224, 0.3); /* Maintain transparency on hover */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.icon {
+.landing-page .icon {
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
   background-size: cover;
 }
 
-.student-icon {
+.landing-page .student-icon {
   background-image: url('../../public/student-icon.jpg');
 }
 
-.employer-icon {
+.landing-page .employer-icon {
   background-image: url('../../public/employer-icon.jpg');
 }
 
-.admin-icon {
+.landing-page .admin-icon {
   background-image: url('../../public/admin-icon.png');
 }
 
-.footer {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #333; /* Dark gray footer text */
+/* User type name styling */
+.landing-page .user-type a span {
+  color: white; /* Change to white */
+  font-weight: bold; /* Make text bold */
 }
 
-.footer a {
-  color: #333; /* Dark gray footer links */
+/* Footer styling */
+.landing-page .footer {
+  margin-top: 40px; /* Adds some space between the user types and the footer */
+  font-size: 14px;
+  color: white; /* Change to white */
+  font-weight: bold; /* Make text bold */
+}
+
+.landing-page .footer a {
+  color: white; /* Change to white */
   text-decoration: none;
 }
 
-.footer a:hover {
+.landing-page .footer a:hover {
   text-decoration: underline;
 }

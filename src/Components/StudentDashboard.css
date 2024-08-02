@@ -1,105 +1,64 @@
-/* General Container Styles */
-.dashboard-container {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{font-family: "Open Sans";}
+
+/* General Dashboard Styles */
+.dashboard {
   width: 100%;
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 20px;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-  text-align: center;
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove padding for full-width view */
+  display: flex;
+  flex-direction: column;
   background-color: #f9f9f9; /* Light neutral background */
+}
+
+.joblistingsbanner{
+  font-weight: 800;
+  color: #2b3a67;
+  font-size: 1.5rem;
+}
+
+.jobs{
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  background-color: #2b3a67;
+}
+.job-listings{
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #2b3a67;
 }
 
 /* Navbar Styles */
 .navbar {
+  width: 100%; /* Ensure the navbar spans the full width */
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #2b3a67; /* Deep blue background */
   padding: 10px 20px;
   color: white;
-  border-radius: 10px;
-}
-
-.navbar-logo img {
-  height: 40px;
-}
-
-.navbar-search {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-search input {
-  padding: 5px 10px;
-  border: 1px solid #ced4da; /* Soft gray border */
-  border-radius: 5px;
-  margin-right: 5px;
-  outline: none;
-  font-size: 1rem;
-}
-
-.navbar-search .search-button {
-  background-color: #5c6ac4; /* Slightly lighter blue */
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
-  color: white;
-  font-size: 1rem;
-}
-
-.navbar-search .search-button .fa-search {
-  color: white;
-}
-
-.navbar-links a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.navbar-links a:hover {
-  text-decoration: underline;
-}
-
-.navbar-profile {
-  display: flex;
-  align-items: center;
-}
-
-.profile-initials {
-  background-color: #ffffff;
-  color: #2b3a67; /* Deep blue for initials */
-  border-radius: 50%;
-  padding: 10px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  font-weight: bold;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures the navbar stays on top */
 }
 
 /* Main Dashboard Styles */
 .dashboard-main {
+  flex-grow: 1; /* Occupies remaining space after navbar */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  padding: 20px;
   text-align: left;
-}
-
-.dashboard-main h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #2b3a67; /* Matching deep blue */
 }
 
 /* Job Listings Styles */
 .job-listings {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Ensure no gaps between cards */
+  justify-content: center; /* Center the job listings */
+  gap: 20px; /* Add space between job cards */
 }
 
 .job-listings .job-card {
@@ -109,7 +68,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px; /* Space below each card */
-  width: calc(33.333% - 20px); /* 3 cards per row */
+  width: 300px; /* Fixed width for each job card */
   box-sizing: border-box;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -129,18 +88,21 @@
   color: #666666; /* Darker gray for job details */
 }
 
-/* Footer Styles */
-.footer {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #666666; /* Dark gray footer text */
+/* Ensure full page layout */
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-.footer a {
-  color: #5c6ac4; /* Slightly lighter blue for footer links */
-  text-decoration: none;
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9; /* Ensure background color is consistent */
 }
 
-.footer a:hover {
-  text-decoration: underline;
+.dashboard {
+  flex-grow: 1; /* Make the container grow to fill the page */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
