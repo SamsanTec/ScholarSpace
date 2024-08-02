@@ -1,74 +1,104 @@
 .apply-job-form-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
-  
-  .apply-job-form-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .form-group input[type="file"],
-  .form-group input[type="number"],
-  .form-group input[type="text"],
-  .form-group input[type="email"],
-  .form-group input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .availability-checkboxes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .availability-checkboxes div {
-    flex: 1 1 calc(33.333% - 10px);
-  }
-  
-  .availability-checkboxes label {
-    display: flex;
-    align-items: center;
-  }
-  
-  .apply-job-form-container button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .apply-job-form-container button[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  
-  .apply-job-form-container p {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 16px;
-    color: #333;
-  }
-  
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Optional: Adds a blur effect to the background */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('../../public/joblistings.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.apply-job-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #002855; /* Dark blue color to stand out */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #002855; /* Dark blue color to stand out */
+}
+
+.form-group input[type="file"],
+.form-group input[type="number"],
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f1f1f1; /* Light grey background for inputs */
+}
+.availability-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Create a grid with 7 equal columns */
+  gap: 15px; /* Space between the items */
+}
+
+.availability-checkboxes button {
+  padding: 10px;
+  background-color: #f1f1f1; /* Light grey background */
+  color: #002855; /* Dark blue text color */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%; /* Ensure all buttons take up full width within their grid cell */
+  text-align: center; /* Center the text within the button */
+}
+
+.availability-checkboxes button.active {
+  background-color: #28a745; /* Green background when active */
+  color: white; /* White text when active */
+}
+
+.availability-checkboxes button:hover {
+  background-color: #d4edda; /* Light green on hover */
+  border-color: #28a745; /* Green border on hover */
+}
+
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #003366; /* Green color for the submit button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #003366; /* Darker green on hover */
+}
+
+.apply-job-form-container p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}

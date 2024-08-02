@@ -22,14 +22,28 @@ const ApplyJobForm = ({ apiUrl }) => {
     }
   };
 
-  const handleAvailabilityChange = (e) => {
-    const { value, checked } = e.target;
-    if (checked) {
-      setAvailability([...availability, value]);
+  const handleAvailabilityChange = (day) => {
+    if (availability.includes(day)) {
+      setAvailability(availability.filter(d => d !== day));
     } else {
-      setAvailability(availability.filter(day => day !== value));
+      setAvailability([...availability, day]);
     }
   };
+  
+  // Example JSX for the buttons
+  <div className="availability-checkboxes">
+    {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map(day => (
+      <button 
+        key={day} 
+        type="button" 
+        className={availability.includes(day) ? 'active' : ''} 
+        onClick={() => handleAvailabilityChange(day)}
+      >
+        {day}
+      </button>
+    ))}
+  </div>
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();

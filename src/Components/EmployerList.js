@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
 import './EmployerList.css';
 
 const EmployerList = ({ apiUrl }) => {
@@ -38,13 +39,16 @@ const EmployerList = ({ apiUrl }) => {
   return (
     <div className="employer-list-container">
       <h2>Employers</h2>
-      <ul>
+      <div className="employer-cards">
         {employers.map((employer) => (
-          <li key={employer.user_id}>
-            <Link to={`/employers/${employer.user_id}`}>{employer.companyName}</Link>
-          </li>
+          <div key={employer.user_id} className="employer-card">
+            <Link to={`/employers/${employer.user_id}`}>
+              <h3>{employer.companyName}</h3>
+            </Link>
+            <p>{employer.companyDescription}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
