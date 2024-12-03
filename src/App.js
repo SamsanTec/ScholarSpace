@@ -31,6 +31,7 @@ import EmployerDetails from './Components/EmployerDetails';
 import CourseDetails from './Components/CourseDetails';
 import { UserProvider } from './Components/UserContext';
 import { JobProvider } from './Components/JobContext';
+import PrivacyPolicy from './Components/PrivacyPolicy';
 import './App.css';
 
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
           <div className="App">
             <Routes>
               <Route path="/" element={<LandingPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/student" element={<StudentAuthPage apiUrl={apiUrl} />} />
               <Route path="/admin" element={<AdminAuthPage apiUrl={apiUrl} />} />
               <Route path="/employer" element={<EmployerAuthPage apiUrl={apiUrl} />} />
@@ -53,7 +55,7 @@ const App = () => {
               <Route path="/jobs" element={<JobListings apiUrl={apiUrl} />} />
               <Route path="/apply-job/:jobId" element={<ApplyJobForm apiUrl={apiUrl} />} />
               <Route path="/job-details/:jobId" element={<JobDetails apiUrl={apiUrl} />} />
-              <Route path="/courses" element={<Courses />} />
+              <Route path="/courses" element={<Courses apiUrl={apiUrl}/>} />
               <Route path="/courses/:courseId" element={<CourseDetails />} />
 
               {/* Employer Routes */}
@@ -69,7 +71,7 @@ const App = () => {
               <Route path="/admin/dashboard" element={<AdminDashboard apiUrl={apiUrl} />} />
               <Route path="/admin/manage-courses" element={<ManageCourses />} />
               <Route path="/admin/view-courses" element={<ViewCourses />} />
-              <Route path="/admin/add-course" element={<AddCourse />} />
+              <Route path="/admin/add-course" element={<AddCourse apiUrl={apiUrl} />} />
               <Route path="/admin/edit-course" element={<EditCourse />} />
               <Route path="/admin/manage-users" element={<ManageUsers />} />
               <Route path="/admin/add-user" element={<AddUser />} />
